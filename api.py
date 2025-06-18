@@ -47,7 +47,7 @@ def validate_and_clean_data(data):
 
     return cleaned
 
-@app.route('/apps/1', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def stroke_prediction():
     if request.method == 'GET':
         return render_template('index.html')

@@ -95,7 +95,7 @@
             <div id="result" class="mt-4" style="display:none;">
                 <h4>Natija:</h4>
                 <p><strong>Insult xavfi:</strong> <span id="strokePrediction"></span></p>
-                <p><strong>Insult ehtimoli:</strong> <span id="strokeProbability"></span></p>
+                <p><strong>Ehtimoli:</strong> <span id="strokeProbability"></span></p>
             </div>
         </div>
     </div>
@@ -112,7 +112,7 @@ document.getElementById('patientForm').addEventListener('submit', async function
     });
 
     try {
-        const response = await fetch('/apps/1', {
+        const response = await fetch('/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)

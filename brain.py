@@ -127,5 +127,10 @@ def predict_new_patient(new_data: dict):
     X_scaled = scaler.transform(X)
 
     pred = model.predict(X_scaled)[0]
-    proba = model.predict_proba(X_scaled)[0][1]
-    return {"prediction": int(pred), "probability_of_stroke": int(float(proba * 100))}
+    proba = model.predict_proba(X_scaled)[0][0]
+    return {"prediction": int(pred), "probability_of_stroke": float(proba)}
+
+
+if __name__ == "__main__":
+    train_and_save_model()
+    test_model()
